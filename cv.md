@@ -1,6 +1,6 @@
 # Aliaksei Baronin   |  __[rsschool-cv](https://AlexBoronin.github.io/rsschool-cv/)__
 ![Aliaksei Baronin](https://im.wampi.ru/2022/12/14/Beginner3bf90100da6e156e.png)
-## __Contacts__
+## Contacts
 - __Location:__ Minsk, Belarus
 - __Phone:__ +375 (29) 782-41-71
 - __Email:__ alex.boronin.22@gmail.com
@@ -9,7 +9,7 @@
 ---
 ## __About me__
 I work well in a team, I have good communication skills, I am diligent and hardworking, and my perseverance, multiplied by the desire to learn and learn new things, will be excellent means to achieve the chosen goals.
-___ 
+___
 ## __Skills__
 - JavaScript
 - HTML/CSS
@@ -18,23 +18,21 @@ ___
 - Linux
 ---
 ## __Code example__
-``` 
+```
 class Rsschool {
-    constructor(text) {
-        this.text = text
-        this.sumResume = 0
-    } 
-    upResume() {
-        this.sumResume += 1
-    }
+	constructor(text) {
+		this.text = text this.sumResume = 0
+	}
+	upResume() {
+	 this.sumResume += 1
+	}
 }
 const firstResume = new Rsschool('Resume text')
 ```
 ---
 ## __Education__
 - __University:__ Academy of the Ministry of Internal Affairs of the Republic of Belarus, master of management
-
-- Courses:
+- __Courses:__
   - [RS Schools](https://rs.school/) - Course «JavaScript/Front-end. Stage 0»  (сompleted)
   - [RS Schools](https://rs.school/) - Course «JavaScript/Front-end. Stage 1»  (training is in progress)
   - [ItLogia](https://itlogia.ru/) - FE Developer (training is in progress)
