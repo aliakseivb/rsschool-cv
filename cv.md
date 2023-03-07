@@ -7,7 +7,7 @@
 - __GitHub:__ [AlexBoronin](https://github.com/AlexBoronin)
 - __Discord:__ Aliaksei Baronin(@AlexBoronin)
 ---
-## **About me**
+## __About me__
 I work well in a team, I have good communication skills, I am diligent and hardworking, and my perseverance, multiplied by the desire to learn and learn new things, will be excellent means to achieve the chosen goals.
 ___ 
 ## __Skills__
@@ -33,9 +33,17 @@ const firstResume = new Rsschool('Resume text')
 ---
 ## __Education__
 - __University:__ Academy of the Ministry of Internal Affairs of the Republic of Belarus, master of management
-- __Courses:__
-    - [RS Schools](https://rs.school/) - Course «JavaScript/Front-end. Stage 0»  (сompleted)
-    - [RS Schools](https://rs.school/) - Course «JavaScript/Front-end. Stage 1»  (training is in progress)
-    - [ItLogia](https://itlogia.ru/) - FE Developer (training is in progress)
-    - [GeekBrains](https://gb.ru/) - Python Developer (training is in progress)
+
+- Courses:
+  - [RS Schools](https://rs.school/) - Course «JavaScript/Front-end. Stage 0»  (сompleted)
+  - [RS Schools](https://rs.school/) - Course «JavaScript/Front-end. Stage 1»  (training is in progress)
+  - [ItLogia](https://itlogia.ru/) - FE Developer (training is in progress)
+  - [GeekBrains](https://gb.ru/) - Python Developer (training is in progress)
 ---
+## __Languages__
+- Belarusian - fluent
+- Russian - fluent
+- English - A2
+- French - A2
+- Polish - I can speak and understand
+- Ukrainian - I can understand
