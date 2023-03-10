@@ -143,7 +143,7 @@ nav {
 
 .section {
     width: 100%;
-    padding: 10px;
+    padding: 20px;
     border: #ffffff 2px solid;
     border-radius: 15px;
 }
@@ -151,7 +151,7 @@ nav {
 .section:hover {
     transform: scale(1.15, 1.15);
     background-color: #bbbebb;
-    transition: .7s;
+    transition: .5s;
 }
 
 h2 {
