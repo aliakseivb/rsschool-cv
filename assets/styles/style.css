@@ -6,13 +6,13 @@
 
 @font-face {
     font-family: Roboto;
-    src: url("../assets/fonts/Roboto.ttf");
+    src: url("../fonts/Roboto.ttf");
     font-weight: 100;
 }
 
 @font-face {
     font-family: Roboto;
-    src: url("../assets/fonts/Robotobold.ttf");
+    src: url("../fonts/Robotobold.ttf");
     font-weight: 300;
 }
 
@@ -29,7 +29,6 @@ html {
 }
 
 .header {
-    border-bottom: 2px solid #343333;
     padding: 25px 0;
     background-color: #a9a7a7;
 }
@@ -79,14 +78,14 @@ nav {
     text-decoration: none;
     align-self: center;
     padding: 0 12px;
-    transition: .8s;
+    transition: .3s;
     position: relative;
 }
 
 .item:hover {
-    color: #debcbc;
-    background: #332c2c;
-    border-radius: 10px;
+    color: #885454;
+    /*background: #332c2c;*/
+    /*border-radius: 10px;*/
 }
 
 .main-container {
@@ -134,14 +133,16 @@ nav {
 }
 
 .main-sections {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
     padding: 10px;
-    justify-content: space-between;
+    /*justify-content: space-between;*/
 }
 
 .section {
-    width: 49%;
+    width: 100%;
     padding: 10px;
     border: #ffffff 2px solid;
     border-radius: 15px;
@@ -155,7 +156,7 @@ nav {
 
 h2 {
     font-size: 30px;
-    padding-left: 50px;
+    margin-left: 50px;
 }
 
 p {
@@ -184,4 +185,10 @@ span {
     font-weight: 300;
     color: #282424;
     line-height: 1.5;
+}
+
+.desk__link,
+.footer__link {
+   text-decoration: none;
+    color: #651c1c;
 }
