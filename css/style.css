@@ -192,3 +192,11 @@ span {
    text-decoration: none;
     color: #651c1c;
 }
+
+.desk li p {
+    text-indent: 20px;
+}
+
+.about {
+    text-align: justify;
+}
