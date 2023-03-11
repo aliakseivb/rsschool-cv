@@ -54,9 +54,11 @@ body {
 .place__img{
     display: none;
     width: 100%;
-    height: 30vh;
+    height: 0;
     text-align: center;
     padding: 1rem;
+    transform-box: fill-box;
+    animation: size;
 }
 
 .place__img img {
@@ -79,9 +81,10 @@ body {
 
 :is(.page:hover) .place__img {
     display: block;
-    animation: size 1s normal;
+    animation: size 1s ease;
     opacity: 100%;
     cursor: pointer;
+    height: 30vh;
 }
 
 :is(.page:hover) .cross {
@@ -96,10 +99,12 @@ body {
 @keyframes size {
     0% {
         opacity: 0;
+        height: 25vh;
     }
 
     100% {
         opacity: 100%;
+        height: 30vh;
     }
 }
 
@@ -117,20 +122,25 @@ body {
 
 #one:checked ~ .place__img {
     display: block;
+    height: 30vh;
 }
 
 #two:checked ~ .place__img {
     display: block;
+    height: 30vh;
 }
 
 #three:checked ~ .place__img {
     display: block;
+    height: 30vh;
 }
 
 #four:checked ~ .place__img {
     display: block;
+    height: 30vh;
 }
 
 #five:checked ~ .place__img {
     display: block;
+    height: 30vh;
 }
