@@ -1,0 +1,82 @@
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+    .container:hover .cross {
+        display: block;
+    }
+
+    .place__img img:hover {
+        transform: scale(.9, .9);
+        opacity: 90%;
+        box-shadow: 0 0 1rem .1rem rgba(208, 208, 208, 0.8);
+    }
+
+    .page:hover{
+        cursor: pointer;
+        color: cornflowerblue;
+        transition: .2s;
+    }
+
+    :is(.page:hover) .place__img {
+        display: block;
+        animation: size 1s ease;
+        opacity: 100%;
+        cursor: pointer;
+        height: 30vh;
+    }
+
+    :is(.page:hover) .cross {
+        rotate: 90deg;
+    }
+
+    :is(.page:hover) .cross path {
+        fill: cornflowerblue;
+        transition: all .3s ease;
+    }
+
+    @keyframes size {
+        0% {
+            opacity: 0;
+            height: 25vh;
+        }
+
+        100% {
+            opacity: 100%;
+            height: 30vh;
+        }
+    }
+}
+
+
+/*820 - 1180*/
+@media screen and (max-width: 1079px) {
+    .title {
+        font-size: .8em;
+    }
+
+    .page__title {
+        font-size: .7em;
+    }
+}
+
+/* 568 - 820 */
+@media screen and (max-width: 819px) {
+    .title {
+        font-size: .7em;
+    }
+
+    .page__title {
+        font-size: .6em;
+    }
+}
+
+
+/* 320 - 568 */
+@media screen and (max-width: 567px) {
+    .title {
+        font-size: .6em;
+    }
+
+    .page__title {
+        font-size: .5em;
+    }
+}
