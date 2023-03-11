@@ -1,0 +1,33 @@
+/*820 - 1180*/
+@media screen and (max-width: 1179px) {
+    .title {
+        font-size: .8em;
+    }
+
+    .page__title {
+        font-size: .7em;
+    }
+}
+
+/* 568 - 820 */
+@media screen and (max-width: 819px) {
+    .title {
+        font-size: .7em;
+    }
+
+    .page__title {
+        font-size: .6em;
+    }
+}
+
+
+/* 320 - 568 */
+@media screen and (max-width: 567px) {
+    .title {
+        font-size: .6em;
+    }
+
+    .page__title {
+        font-size: .5em;
+    }
+}
