@@ -4,5 +4,29 @@
 }
 
 .container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
 
+.header__container {
+    padding: 30px 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__logo-title {
+    font-family: Georgia, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #F1CDB3;
+    -webkit-text-stroke: 1px black;
+    letter-spacing: 2px;
+}
+
+.header__logo-subtitle {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: #FFFFFF;
+    letter-spacing: 2px;
 }
