@@ -106,7 +106,7 @@ h1 {
     color: #FFFFFF;
     margin-top: 163px;
     max-width: 310px;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
 }
 
 .start__text {
@@ -122,15 +122,15 @@ h1 {
 }
 
 .start__button {
-    padding: 15px 0;
+    padding: 19px 0 15px;
     max-width: 207px;
     text-align: center;
-    vertical-align: center;
     font-family: Georgia, sans-serif;
     font-weight: 400;
     font-size: 16px;
     background: #F1CDB3;
     border-radius: 100px;
+    letter-spacing: 0.08rem;
 }
 
 .start__button a {
@@ -163,7 +163,7 @@ h1 {
     max-width: 430px;
     font-family: 'Arial', sans-serif;
     font-weight: 400;
-    font-size: 12.3px;
+    font-size: 15px;
     line-height: 24px;
     color: #4C4C4C;
     margin-bottom: 25px;
@@ -173,7 +173,7 @@ h1 {
     max-width: 430px;
     font-family: 'Arial', sans-serif;
     font-weight: 400;
-    font-size: 12.3px;
+    font-size: 15px;
     line-height: 24px;
     color: #4C4C4C;
 }
@@ -211,6 +211,8 @@ h1 {
     grid-template-columns: 1fr;
     justify-items: center;
     background: #FAFAFA;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
 }
 
 .pets__item--name {
@@ -297,11 +299,11 @@ h1 {
     font-size: 35px;
     letter-spacing: 0.06em;
     color: #545454;
-    margin-bottom: 60px;
+    margin-bottom: 65px;
 }
 
 .help__title p:first-child {
-    margin-bottom: 4px;
+    margin-bottom: 5px;
 }
 
 .help__items {
@@ -322,7 +324,7 @@ h1 {
     font-size: 20px;
     letter-spacing: 0.06em;
     color: #545454;
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 .help__items-bottom {
@@ -332,7 +334,7 @@ h1 {
 
 .donat {
     display: flex;
-    padding: 80px 182px 96px;
+    padding: 80px 182px 100px;
 }
 .donat__img {
     padding-top: 11px;
@@ -355,8 +357,8 @@ h1 {
 .donat__title-link {
     font-family: Georgia, sans-serif;
     font-weight: 400;
-    font-size: 12px;
-    letter-spacing: 0.1em;
+    font-size: 13px;
+    letter-spacing: 0.08em;
     color: #545454;
     margin-bottom: 20px;
 }
@@ -388,10 +390,11 @@ h1 {
     font-size: 10px;
     line-height: 16px;
     color: #B2B2B2;
+    letter-spacing: 0.05em;
 }
 
 .footer__container {
-    padding: 40px 40px 0;
+    padding: 40px 0 0;
     display: flex;
     justify-content: space-between;
     background-image: url("../images/start-screen-background.png");
@@ -400,6 +403,13 @@ h1 {
     background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 
+.question {
+    margin-left: 40px;
+}
+
+.footer__img {
+    margin-right: 40px;
+}
 .question__title {
     width: 280px;
     margin-top: 16px;
