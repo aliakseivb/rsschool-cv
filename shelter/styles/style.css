@@ -9,6 +9,10 @@
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -68,6 +72,7 @@
 .menu__item {
     display: flex;
     margin-left: 36px;
+    padding-bottom: 4px;
 }
 
 .menu__item a {
@@ -76,6 +81,12 @@
     font-size: 15px;
     color: #CDCDCD;
     text-align: right;
+    padding-bottom: 4px;
+    border-bottom: solid 4px transparent;
+    transition: .3s;
+}
+.menu__item a:hover {
+    border-bottom: solid 4px #F1CDB3;
 }
 
 .menu__item:first-child a {
@@ -129,6 +140,12 @@ h1 {
     background: #F1CDB3;
     border-radius: 100px;
     letter-spacing: 0.08rem;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.start__button:hover {
+    box-shadow: 0 3px 14px 0 rgb(221 213 213 / 80%);
 }
 
 .start__button a {
@@ -216,6 +233,7 @@ h1 {
     margin-bottom: 60px;
 }
 
+
 .pets__item {
     display: grid;
     grid-template-columns: 1fr;
@@ -223,6 +241,12 @@ h1 {
     background: #FAFAFA;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.pets__item:hover {
+    box-shadow: 0 0 9px 0 rgb(111 108 108 / 90%);
 }
 
 .pets__item--name {
@@ -251,6 +275,12 @@ h1 {
     color: #292929;
     letter-spacing: 0.09rem;
     margin-bottom: 30px;
+    transition: .3s;
+}
+
+.pets__item-button:hover {
+    box-shadow: 0 0 9px 0 rgba(183, 161, 161, 0.9);
+    background: #F1CDB3;
 }
 
 .btn__slider {
@@ -261,6 +291,11 @@ h1 {
     align-items: center;
     justify-content: center;
     border-radius: 100%;
+    transition: .3s;
+}
+
+.btn__slider:hover {
+    background: #F1CDB3;
 }
 
 .slider__prev {
@@ -295,6 +330,11 @@ h1 {
     color: #292929;
     letter-spacing: 0.09rem;
     margin-bottom: 30px;
+    transition: .3s;
+}
+
+.pets__button:hover {
+    box-shadow: 0 0 9px 0 rgb(111 108 108 / 90%);
 }
 
 .help__container {
@@ -322,7 +362,9 @@ h1 {
 
 .help__items__container {
     padding: 0 130px;
+    cursor: pointer;
 }
+
 .help__items {
     display: flex;
     justify-content: space-between;
@@ -333,6 +375,10 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+.help__item:hover img{
+    transform: scale(1.2, 1.2);
 }
 
 .help__item__title {
@@ -434,6 +480,7 @@ h1 {
 .footer__img {
     margin-right: 40px;
 }
+
 .question__title {
     width: 280px;
     margin-top: 16px;

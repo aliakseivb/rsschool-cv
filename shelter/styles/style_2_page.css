@@ -9,9 +9,14 @@
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .header {
     background: #FFFFFF;
 }
+
 .container {
     max-width: 1280px;
     margin: 0 auto;
@@ -26,6 +31,7 @@
 
 .header__logo {
     margin-left: 40px;
+    text-decoration: none;
 }
 .header__logo-title {
     font-family: Georgia, sans-serif;
@@ -63,6 +69,11 @@
     font-size: 15px;
     color: #545454;
     text-align: right;
+    transition: .5s;
+}
+
+.menu__item a:hover {
+    border-bottom: solid 4px #F1CDB3;
 }
 
 .menu__item:nth-child(2) a {
@@ -73,6 +84,7 @@
 .main {
     background: #F6F6F6;
 }
+
 .main__container {
     padding-top: 80px;
     background: #F6F6F6;
@@ -112,6 +124,13 @@ h1 span{
     background: #FAFAFA;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.main__item:hover {
+    box-shadow: 0 0 9px 0 rgb(111 108 108 / 90%);
+    transform: scale(1.05, 1.05);
 }
 
 .pets__item-image {
@@ -141,6 +160,12 @@ h1 span{
     color: #292929;
     letter-spacing: 0.09rem;
     margin-bottom: 30px;
+    transition: .3s;
+}
+
+.pets__item-button:hover {
+    box-shadow: 0 0 9px 0 rgba(183, 161, 161, 0.9);
+    background: #F1CDB3;
 }
 
 .slider {
@@ -158,8 +183,15 @@ h1 span{
     justify-content: center;
     align-items: center;
     margin-right: 20px;
+    cursor: pointer;
+    transition: .5s;
 }
 
+.slider__item:hover {
+    transform: scale(1.1, 1.1);
+    background: #b99e8a;
+    box-shadow: 0 0 5px 2px rgb(111 108 108 / 50%);
+}
 .slider-center {
     font-family: Georgia, sans-serif;
     font-size: 20px;
@@ -174,13 +206,17 @@ h1 span{
 }
 
 .footer__container {
-    padding: 40px 40px 0;
+    padding: 40px 0 0;
     display: flex;
     justify-content: space-between;
 }
 
 .question {
-    padding-left: 40px;
+    margin-left: 40px;
+}
+
+.footer__img {
+    margin-right: 40px;
 }
 
 .question__title {
@@ -205,12 +241,7 @@ h1 span{
     margin-bottom: 43px;
 }
 
-.question__mail-link p {
-    display: flex;
-    align-items: center;
-}
-
-.question__mail-link img{
+.question__mail-link  img{
     margin-right: 20px;
 }
 
@@ -224,7 +255,7 @@ h1 span{
     color: #F1CDB3;
 }
 
-.question__tel-link  img{
+.question__tel-link img{
     margin-right: 20px;
 }
 
@@ -256,8 +287,4 @@ h1 span{
 
 .question__location-link img {
     margin-right: 20px;
-}
-
-.footer__img {
-    padding-right: 40px;
 }
