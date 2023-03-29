@@ -81,6 +81,10 @@ h1 {
     margin-bottom: 60px;
 }
 
+h1 span{
+    display: block;
+}
+
 .main__items {
     display: grid;
     grid-template-columns: repeat(4, 270px);
