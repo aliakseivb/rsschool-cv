@@ -319,6 +319,7 @@
         padding: 31px 10px 0;
         align-items: center;
     }
+
     .question {
         margin-right: unset;
         margin-bottom: 40px;
@@ -356,6 +357,7 @@
     .question__location-link:last-child {
         margin-bottom: 27px;
     }
+
     .footer__img {
         width: 260px;
         /*height: 269px;*/
@@ -567,6 +569,7 @@
         margin-top: 20px;
     }
 }
+
 @media screen and (max-width: 340px) {
     .question__location-link img {
         margin-right: 10px;
