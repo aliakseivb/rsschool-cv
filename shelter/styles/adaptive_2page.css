@@ -111,40 +111,44 @@
 
 @media screen and (max-width: 760px) {
     .menu {
-        position: fixed;
+        position: absolute;
         top: 0;
+        height: 100vh;
         right: -400px;
-        z-index: 1;
         transition: .5s;
         background: #262425FF;
+        z-index: 3;
+        padding-top: 250px;
+        width: 320px;
     }
 
     .open {
+        top: 0;
         right: 0;
+        z-index: 3;
     }
 
     .menu__items {
         display: flex;
         flex-direction: column;
-        width: 320px;
-        height: 100vh;
         align-items: center;
-        justify-content: center;
+        justify-content: start;
     }
 
     .menu__item {
         display: flex;
         margin-left: unset;
-        margin-bottom: 40px;
+        margin-bottom: 45px;
         color: #CDCDCD;
+        z-index: 3;
     }
 
     .menu__item a {
         text-decoration: none;
         font-family: 'Arial', sans-serif;
         font-size: 32px;
-        text-align: right;
         transition: .5s;
+        z-index: 3;
     }
 
     .menu__item:nth-child(2) a{
@@ -157,9 +161,10 @@
 
     .burger {
         display: flex;
-        margin-right: 20px;
-        z-index: 30;
-        transition: .3s;
+        position: absolute;
+        top: 45px;
+        right: 20px;
+        z-index: 4;
     }
 
     .burger-open {

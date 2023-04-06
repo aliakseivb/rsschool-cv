@@ -13,14 +13,18 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+
+}
 .container {
     max-width: 1280px;
     margin: 0 auto;
 }
 
 .header {
-    transition: .3s;
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
 }
 
@@ -28,8 +32,9 @@ html {
     background: url("../images/start-screen-gradient-background.png") no-repeat center;
     background-size: cover;
     box-shadow: 0 1px 5px 0 rgba(23, 22, 22, 0.8);
-    z-index: 10;
+    z-index: 2;
     padding-bottom: 15px;
+    transition: .3s;
 }
 
 .header__container {
@@ -104,7 +109,7 @@ html {
 .start__container {
     display: flex;
     justify-content: space-between;
-    padding: 170px 40px 0;
+    padding: 182px 40px 0;
 }
 
 h1 {
@@ -582,10 +587,32 @@ h1 {
     width: 30px;
     height: 22px;
     cursor: pointer;
+    z-index: 4;
+    transition: .3s;
 }
 
 .burger .line {
     width: 100%;
     height: 2px;
     background: #F1CDB3;
+}
+
+
+.popup {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0;
+    transition: .3s;
+    z-index: -2;
+}
+
+.popup-active {
+    display: block;
+    opacity: 80%;
+    z-index: 1;
 }
