@@ -27,6 +27,7 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .header__logo {
@@ -67,11 +68,13 @@ html {
     font-size: 15px;
     color: #545454;
     text-align: right;
+    padding-bottom: 4px;
+    border-bottom: 4px solid transparent;
     transition: .5s;
 }
 
 .menu__item a:hover {
-    border-bottom: solid 4px #F1CDB3;
+    border-bottom: 4px solid #F1CDB3;
 }
 
 .menu__item:nth-child(2) a {
@@ -294,6 +297,7 @@ h1 span{
     justify-content: space-between;
     width: 30px;
     height: 22px;
+    cursor: pointer;
 }
 
 .burger .line {

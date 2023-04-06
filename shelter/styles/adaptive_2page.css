@@ -111,11 +111,63 @@
 
 @media screen and (max-width: 760px) {
     .menu {
-        display: none;
+        position: fixed;
+        top: 0;
+        right: -400px;
+        z-index: 1;
+        transition: .5s;
+        background: #262425FF;
+    }
+
+    .open {
+        right: 0;
+    }
+
+    .menu__items {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu__item {
+        display: flex;
+        margin-left: unset;
+        margin-bottom: 40px;
+        color: #CDCDCD;
+    }
+
+    .menu__item a {
+        text-decoration: none;
+        font-family: 'Arial', sans-serif;
+        font-size: 32px;
+        text-align: right;
+        transition: .5s;
+    }
+
+    .menu__item:nth-child(2) a{
+        color: #fafafa;
+    }
+
+    .menu__item a:hover {
+        color: #fafafa;
     }
 
     .burger {
         display: flex;
+        margin-right: 20px;
+        z-index: 30;
+        transition: .3s;
+    }
+
+    .burger-open {
+        rotate: 90deg;
+    }
+
+    .burger-open .line {
+        background: #F1CDB3;
     }
 
     .footer__container {

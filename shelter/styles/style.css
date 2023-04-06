@@ -18,24 +18,38 @@ html {
     margin: 0 auto;
 }
 
+.header {
+    transition: .3s;
+    position: fixed;
+    width: 100vw;
+}
+
+.header__active {
+    background: url("../images/start-screen-gradient-background.png") no-repeat center;
+    background-size: cover;
+    box-shadow: 0 1px 5px 0 rgba(23, 22, 22, 0.8);
+    z-index: 10;
+    padding-bottom: 15px;
+}
+
 .header__container {
     padding: 30px 40px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .main-img {
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../images/start-screen-background.png");
+    background-image: url("../images/start-screen-gradient-background.png");
     background-position: center;
     background-size: cover;
     height: 907px;
     width: 100%;
     z-index: -1;
-    background: radial-gradient(100% 215.42% at 0% 0%, #5B483A 0%, #262425 100%);
 }
 
 .header__logo-title {
@@ -90,7 +104,7 @@ html {
 .start__container {
     display: flex;
     justify-content: space-between;
-    padding: 90px 40px 0;
+    padding: 170px 40px 0;
 }
 
 h1 {
@@ -567,6 +581,7 @@ h1 {
     justify-content: space-between;
     width: 30px;
     height: 22px;
+    cursor: pointer;
 }
 
 .burger .line {
