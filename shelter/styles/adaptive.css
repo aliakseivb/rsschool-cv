@@ -119,12 +119,7 @@
     }
 
     .start__image {
-        display: flex;
-        justify-content: right;
-    }
-
-    .start__image img {
-        max-width: 569px;
+        padding-left: 44%;
     }
 
     .start__button {
@@ -230,7 +225,6 @@
     .menu.open {
         right: 0;
         z-index: 3;
-
     }
 
     .menu__items {
@@ -279,7 +273,6 @@
 
     .burger-open .line {
         background: #F1CDB3;
-        z-index: 3;
     }
 
     .pets__items {

@@ -52,7 +52,6 @@
 @media screen and (max-width: 880px) {
     .header__container {
         padding: 30px 30px;
-        align-items: center;
     }
 
     .header__logo {
@@ -111,19 +110,16 @@
 
 @media screen and (max-width: 760px) {
     .menu {
-        position: absolute;
+        position: fixed;
         top: 0;
-        height: 100vh;
         right: -400px;
         transition: .5s;
         background: #262425FF;
         z-index: 3;
         padding-top: 250px;
-        width: 320px;
     }
 
     .open {
-        top: 0;
         right: 0;
         z-index: 3;
     }
@@ -133,6 +129,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: start;
+        width: 320px;
+        height: 100vh;
     }
 
     .menu__item {
@@ -161,10 +159,11 @@
 
     .burger {
         display: flex;
-        position: absolute;
+        z-index: 4;
+        transition: .3s;
+        position: fixed;
         top: 45px;
         right: 20px;
-        z-index: 4;
     }
 
     .burger-open {

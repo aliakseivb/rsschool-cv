@@ -15,7 +15,18 @@ html {
 
 .header {
     background: #FFFFFF;
+    /*position: fixed;*/
+    /*top: 0;*/
+    /*left: 0;*/
+    /*width: 100vw;*/
 }
+
+/*.header__active {*/
+/*    background-size: cover;*/
+/*    box-shadow: 0 1px 5px 0 rgba(23, 22, 22, 0.8);*/
+/*    z-index: 2;*/
+/*    transition: .3s;*/
+/*}*/
 
 .container {
     max-width: 1280px;

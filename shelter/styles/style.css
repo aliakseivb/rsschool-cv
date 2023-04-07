@@ -21,21 +21,21 @@ body {
     margin: 0 auto;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-}
+/*.header {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    width: 100vw;*/
+/*}*/
 
-.header__active {
-    background: url("../images/start-screen-gradient-background.png") no-repeat center;
-    background-size: cover;
-    box-shadow: 0 1px 5px 0 rgba(23, 22, 22, 0.8);
-    z-index: 2;
-    padding-bottom: 15px;
-    transition: .3s;
-}
+/*.header__active {*/
+/*    background: url("../images/start-screen-gradient-background.png") no-repeat center;*/
+/*    background-size: cover;*/
+/*    box-shadow: 0 1px 5px 0 rgba(23, 22, 22, 0.8);*/
+/*    z-index: 2;*/
+/*    padding-bottom: 15px;*/
+/*    transition: .3s;*/
+/*}*/
 
 .header__container {
     padding: 30px 40px 0;
@@ -109,7 +109,7 @@ body {
 .start__container {
     display: flex;
     justify-content: space-between;
-    padding: 182px 40px 0;
+    padding: 90px 40px 0;
 }
 
 h1 {
