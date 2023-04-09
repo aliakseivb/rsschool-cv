@@ -8,6 +8,49 @@ window.onload = function () {
     //         header.classList.remove('header__active');
     //     }
     // };
+
+
+    const pets = []
+    let petsArr = []
+
+    // Promise.all([fetch('../src/pets.json'),]
+    // )
+    //     .then(async ([petsResponse]) => {
+    //         const petsJson = await petsResponse.json();
+    //         return [petsJson];
+    //     })
+    //     .then(res => {
+    //         pets = res[0];
+    //         console.log(pets);
+    //     });
+    async function getDAta() {
+        const url = '../src/pets.json';
+        const res = await fetch(url);
+        const data = await res.json();
+        data.forEach((item) => pets.push(item));
+        let i = 0;
+        petsArr.push(pets)
+        while (i < 6) {
+            let num = [];
+            let newArr = [];
+            for (let j = 0; j < pets.length; j++) {
+                let random = getRandomInt();
+                if (!num.includes(random)) {
+                    newArr.push(pets[random]);
+                    num.push(random);
+                }else {
+                    j--
+                }
+                num = [];
+            }
+            petsArr.push(newArr);
+            i++
+
+        }
+    }
+
+    getDAta()
+    console.log(petsArr)
     const burger = document.getElementById('burger');
     const menu = document.getElementsByClassName('menu');
     const popup = document.querySelector('.popup');
@@ -27,8 +70,7 @@ window.onload = function () {
         } else {
             body.setAttribute('style', "position: unset");
         }
-        ;
-    })
+    });
 
     document.querySelectorAll('#menu *').forEach((item) => {
         item.onclick = () => {
@@ -47,82 +89,108 @@ window.onload = function () {
         body.style.position = 'unset';
     })
 
+    const BTN_LEFT = document.querySelector('#slider__prev');
+    const BTN_RIGHT = document.querySelector('#slider__next');
+    const PETS_CARUSEL = document.querySelector('#pets-carusel');
+    const CARD = document.getElementsByClassName('pets__item');
+    const CARD_BUTTON = document.getElementsByClassName('pets__item-button');
+    const ACTIVE_ELEM = document.querySelectorAll('#items-active .pets__item');
+    // const ACTIVE_ITEM = document.querySelectorAll('#items-active');
+    const LEFT_ELEM = document.querySelectorAll('#items-left .pets__item');
+    const RIGHT_ELEM = document.querySelectorAll('#items-right .pets__item');
+    let flag = true;
+    let side = '';
+    let sourceStamp = [];
+
+
+    const moveLeft = () => {
+        PETS_CARUSEL.classList.add('move-left');
+        BTN_LEFT.removeEventListener('click', moveLeft);
+        BTN_RIGHT.removeEventListener('click', moveRight);
+        for (let i = 0; i < CARD.length; i++) {
+            CARD[i].classList.remove('img-eff')
+            CARD_BUTTON[i].classList.remove('button-eff')
+        }
+        side = 'left';
+    };
+
+    const moveRight = () => {
+        PETS_CARUSEL.classList.add('move-right');
+        BTN_RIGHT.removeEventListener('click', moveRight);
+        BTN_LEFT.removeEventListener('click', moveLeft);
+        for (let i = 0; i < CARD.length; i++) {
+            CARD[i].classList.remove('img-eff')
+            CARD_BUTTON[i].classList.remove('button-eff')
+        }
+        side = 'right';
+    };
+
+    function getRandomInt() {
+        return Math.floor(Math.random() * 8);
+    }
+
+    BTN_LEFT.addEventListener('click', moveLeft);
+    BTN_RIGHT.addEventListener('click', moveRight);
+
+    PETS_CARUSEL.addEventListener('transitionend', (transitionEvent) => {
+        if (transitionEvent.propertyName === 'transform' && side === 'left') {
+            PETS_CARUSEL.classList.remove('move-left');
+            document.querySelector('#items-active').innerHTML = document.querySelector('#items-left').innerHTML;
+            createElements();
+        }
+        if (transitionEvent.propertyName === 'transform' && side === 'right') {
+            PETS_CARUSEL.classList.remove('move-right');
+            document.querySelector('#items-active').innerHTML = document.querySelector('#items-right').innerHTML;
+            createElements();
+        }
+
+        BTN_LEFT.addEventListener('click', moveLeft);
+        BTN_RIGHT.addEventListener('click', moveRight);
+        for (let i = 0; i < CARD.length; i++) {
+            CARD[i].classList.add('img-eff')
+            CARD_BUTTON[i].classList.add('button-eff')
+        }
+    })
+
+    function createElements() {
+        if (side === 'left') {
+            for (let i = 0; i < ACTIVE_ELEM.length; i++) {
+                let numero = [];
+                for (let j = 0; j < LEFT_ELEM.length; j++) {
+                    let random = getRandomInt();
+
+                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
+                    && !numero.includes(random)) {
+                        LEFT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
+                        LEFT_ELEM.item(j).children[1].textContent = pets[random].name;
+                        numero.push(random)
+                    } else {
+                        j--
+                    }
+                }
+            }
+        }
+        if (side === 'right') {
+            for (let i = 0; i < ACTIVE_ELEM.length; i++) {
+                let numero = [];
+                for (let j = 0; j < RIGHT_ELEM.length; j++) {
+                    let random = getRandomInt();
+                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
+                        && !numero.includes(random)) {
+                        RIGHT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
+                        RIGHT_ELEM.item(j).children[1].textContent = pets[random];
+                        numero.push(random)
+                    } else {
+                        j--
+                    }
+                }
+            }
+        }
+    }
 }
 
 
-let pets = [];
-Promise.all([fetch('../src/pets.json'),]
-)
-    .then(async ([petsResponse]) => {
-        const petsJson = await petsResponse.json();
-        return [petsJson];
-    })
-    .then(res => {
-        pets = res[0];
-        console.log(pets);
-    });
-// let url = '../src/pets.json'
 
-// const getData = function (url) {
-//     new Promise((resolve, reject) =>
-//     fetch(url)
-//         .then(response => console.log(response.json()))
-//         .then(json => console.log(resolve(json)))
-//         .catch(error => reject(error))
-//     )
-//
-// }
-// getData(fetch(url))
-// import data from "../src/pets.json"
-// let data
-// let pets = []
-//
-// async function getDAta() {
-//     const url = '../src/pets.json';
-//     const res = await fetch(url);
-//     data = await res.json();
-//     console.log(data)
-//     data.forEach((item) => pets.push(item));
-//     return pets
-// }
-// console.log(getDAta())
-// import pets from '../src/pets.json'
-// console.log(pets[0].name)
-// const my = JSON.parse(pets)
-// console.log(my)
 
-// async function getData (){
-//     res = await fetch('../src/pets.json');
-//     console.log(res)
-//     data = await JSON.parse(res);
-//     console.log(data)
-//     // data.forEach((item) => pets.push(item));
-//     // console.log(pets)
-//     // console.log(pets.length)
-//     // return pets
-// }
-// console.log(getData());
 
-// function parseJSON(jsonString) {
-//     return new Promise((resolve, reject) => {
-//         try {
-//             const jsonObject = JSON.parse(jsonString);
-//             resolve(jsonObject);
-//         } catch (error) {
-//             reject(error);
-//         }
-//     });
-// }
-// async function run() {
-//     const jsonString = pets[0];
-//     try {
-//         // let res = await fetch(jsonString);
-//         const jsonObject = await parseJSON(data);
-//         console.log(jsonObject.name); // выводит "John"
-//         console.log(jsonObject.type); // выводит 30
-//         // console.log(jsonObject.city); // выводит "New York"
-//     } catch (error) {
-//         console.error(error);
-//     }
-// }
-// console.log(run());
+
