@@ -1,7 +1,22 @@
 @media screen and (max-width: 1279px) {
+
+    .page-wrapper {
+        max-width: 708px;
+    }
+
     .main__items {
-        grid-template-columns: repeat(3, 270px);
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: repeat(2, 270px);
+        justify-content: center;
+        margin-bottom: 35px;
+        column-gap: 20px;
+    }
+
+    .main__item:nth-child(7) {
+        display: none;
+    }
+
+    .main__item:last-child {
+        display: none;
     }
 
     .menu__item img {
@@ -30,22 +45,6 @@
 
     .footer__img {
         margin-right: unset;
-    }
-}
-
-@media screen and (max-width: 980px) {
-    .main__items {
-        grid-template-columns: repeat(2, 270px);
-        justify-content: center;
-        column-gap: 10%;
-    }
-
-    .main__item:nth-child(7) {
-        display: none;
-    }
-
-    .main__item:last-child {
-        display: none;
     }
 }
 
@@ -85,13 +84,6 @@
         margin-bottom: 30px;
     }
 
-    .main__items {
-        grid-template-columns: repeat(2, 270px);
-        justify-content: center;
-        column-gap: 6%;
-        margin-bottom: 35px;
-    }
-
     .slider {
         padding-left: 20px;
     }
@@ -121,7 +113,6 @@
 
     .open {
         right: 0;
-        z-index: 3;
     }
 
     .menu__items {
@@ -159,11 +150,11 @@
 
     .burger {
         display: flex;
-        z-index: 4;
         transition: .3s;
         position: fixed;
         top: 45px;
         right: 20px;
+        z-index: 10;
     }
 
     .burger-open {
@@ -206,6 +197,21 @@
     .question__location-link {
         justify-content: center;
     }
+
+    .page-wrapper {
+        max-width: 300px;
+    }
+
+    .main__items {
+        grid-template-columns: repeat(1, 270px);
+        margin-bottom: 35px;
+    }
+
+    .main__item:nth-child(4),
+    .main__item:nth-child(5),
+    .main__item:nth-child(6) {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -218,10 +224,6 @@
         padding: 42px 10px;
     }
 
-    .main__items {
-        grid-template-columns: repeat(1, 280px);
-        margin-bottom: 35px;
-    }
 
     .slider {
         padding-left: unset;
@@ -246,17 +248,6 @@
         font-size: 25px;
         line-height: 32px;
         margin-bottom: 40px;
-    }
-
-    .main__items {
-        grid-template-columns: repeat(1, 270px);
-        margin-bottom: 35px;
-    }
-
-    .main__item:nth-child(4),
-    .main__item:nth-child(5),
-    .main__item:nth-child(6) {
-        display: none;
     }
 
     .main__items {

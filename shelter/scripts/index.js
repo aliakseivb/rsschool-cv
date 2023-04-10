@@ -50,7 +50,8 @@ window.onload = function () {
     }
 
     getDAta()
-    console.log(petsArr)
+
+    /* БУРГЕР */
     const burger = document.getElementById('burger');
     const menu = document.getElementsByClassName('menu');
     const popup = document.querySelector('.popup');
@@ -89,6 +90,9 @@ window.onload = function () {
         body.style.position = 'unset';
     })
 
+
+    /* КАРУСЕЛЬ */
+
     const BTN_LEFT = document.querySelector('#slider__prev');
     const BTN_RIGHT = document.querySelector('#slider__next');
     const PETS_CARUSEL = document.querySelector('#pets-carusel');
@@ -116,8 +120,8 @@ window.onload = function () {
 
     const moveRight = () => {
         PETS_CARUSEL.classList.add('move-right');
-        BTN_RIGHT.removeEventListener('click', moveRight);
         BTN_LEFT.removeEventListener('click', moveLeft);
+        BTN_RIGHT.removeEventListener('click', moveRight);
         for (let i = 0; i < CARD.length; i++) {
             CARD[i].classList.remove('img-eff')
             CARD_BUTTON[i].classList.remove('button-eff')
@@ -138,13 +142,13 @@ window.onload = function () {
             document.querySelector('#items-active').innerHTML = document.querySelector('#items-left').innerHTML;
             createElements();
         }
+        BTN_LEFT.addEventListener('click', moveLeft);
         if (transitionEvent.propertyName === 'transform' && side === 'right') {
             PETS_CARUSEL.classList.remove('move-right');
             document.querySelector('#items-active').innerHTML = document.querySelector('#items-right').innerHTML;
             createElements();
         }
 
-        BTN_LEFT.addEventListener('click', moveLeft);
         BTN_RIGHT.addEventListener('click', moveRight);
         for (let i = 0; i < CARD.length; i++) {
             CARD[i].classList.add('img-eff')
@@ -153,9 +157,10 @@ window.onload = function () {
     })
 
     function createElements() {
+        let numero
         if (side === 'left') {
             for (let i = 0; i < ACTIVE_ELEM.length; i++) {
-                let numero = [];
+                numero = [];
                 for (let j = 0; j < LEFT_ELEM.length; j++) {
                     let random = getRandomInt();
 
@@ -163,7 +168,7 @@ window.onload = function () {
                     && !numero.includes(random)) {
                         LEFT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
                         LEFT_ELEM.item(j).children[1].textContent = pets[random].name;
-                        numero.push(random)
+                        numero.push(random);
                     } else {
                         j--
                     }
@@ -172,14 +177,14 @@ window.onload = function () {
         }
         if (side === 'right') {
             for (let i = 0; i < ACTIVE_ELEM.length; i++) {
-                let numero = [];
+                numero = [];
                 for (let j = 0; j < RIGHT_ELEM.length; j++) {
                     let random = getRandomInt();
                     if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
                         && !numero.includes(random)) {
                         RIGHT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
-                        RIGHT_ELEM.item(j).children[1].textContent = pets[random];
-                        numero.push(random)
+                        RIGHT_ELEM.item(j).children[1].textContent = pets[random].name;
+                        numero.push(random);
                     } else {
                         j--
                     }
