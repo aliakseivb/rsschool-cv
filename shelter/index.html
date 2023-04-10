@@ -18,10 +18,10 @@
                 <div class="header__logo-title">Cozy House</div>
                 <div class="header__logo-subtitle">Shelter for pets in Boston</div>
             </div>
-            <nav class="menu">
+            <nav class="menu" id="menu">
                 <ul class="menu__items">
                     <li class="menu__item">
-                        <a href="#!">About the shelter</a>
+                        <a href="#">About the shelter</a>
                     </li>
                     <li class="menu__item">
                         <a href="./pages/our_pets.html">Our pets</a>
@@ -34,7 +34,8 @@
                     </li>
                 </ul>
             </nav>
-            <div class="burger">
+            <div class="popup"></div>
+            <div class="burger" id="burger">
                 <div class="line"></div>
                 <div class="line"></div>
                 <div class="line"></div>
@@ -104,33 +105,83 @@
                     <span>are looking for a house</span>
                 </h2>
                 <div class="pets__items__slider">
-                    <div class="btn__slider slider__prev">
+                    <div class="btn__slider slider__prev" id="slider__prev">
                         <img src="./images/svg/arrow.svg" alt="Arrow">
                     </div>
-                    <div class="pets__items">
-                        <div class="pets__item">
-                            <img src="./images/pets-katrine.png" alt="Katrine" class="pets__item-image">
-                            <div class="pets__item--name">
-                                Katrine
+                    <div class="carusel-wrapper" id="wrapper">
+                        <div class="pets__items" id="pets-carusel">
+                            <div class="items" id="items-left">
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-sophia.png" alt="Sophia" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Sophia
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-timmy.png" alt="Timmy" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Timmy
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-charly.png" alt="Charly" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Charly
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
                             </div>
-                            <a href="#1" class="pets__item-button">Learn more</a>
-                        </div>
-                        <div class="pets__item">
-                            <img src="./images/pets-jennifer.png" alt="Jennifer" class="pets__item-image">
-                            <div class="pets__item--name">
-                                Jennifer
+                            <div class="items" id="items-active">
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-katrine.png" alt="Katrine" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Katrine
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-jennifer.png" alt="Jennifer" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Jennifer
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-woody.png" alt="Woody" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Woody
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
                             </div>
-                            <a href="#1" class="pets__item-button">Learn more</a>
-                        </div>
-                        <div class="pets__item">
-                            <img src="./images/pets-woody.png" alt="Woody" class="pets__item-image">
-                            <div class="pets__item--name">
-                                Woody
+                            <div class="items" id="items-right">
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-scarlet.png" alt="Scarlet" class="pets__item-image ">
+                                    <div class="pets__item-name">
+                                        Scarlett
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-freddie.png" alt="Freddie" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Freddie
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
+                                <div class="pets__item img-eff">
+                                    <img src="./images/pets-katrine.png" alt="Katrine" class="pets__item-image">
+                                    <div class="pets__item-name">
+                                        Katrine
+                                    </div>
+                                    <a href="#1" class="pets__item-button button-eff">Learn more</a>
+                                </div>
                             </div>
-                            <a href="#1" class="pets__item-button">Learn more</a>
                         </div>
                     </div>
-                    <div class="btn__slider slider__next">
+                    <div class="btn__slider slider__next" id="slider__next">
                         <img src="./images/svg/arrow.svg" alt="Arrow">
                     </div>
                 </div>
@@ -149,46 +200,46 @@
                     <span>our shelter</span>
                 </h2>
                 <div class="help__items__container">
-<!--                    <div class="help__items">-->
-                        <div class="help__item">
-                            <img src="./images/svg/food.svg" alt="Food">
-                            <div class="help__item__title">Pet food</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/transportation.svg" alt="Transportation">
-                            <div class="help__item__title">Transportation</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/toys.svg" alt="Toys">
-                            <div class="help__item__title">Toys</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/bowls-and-cups.svg" alt="Bowls and cups">
-                            <div class="help__item__title">Bowls and cups</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/shampoos.svg" alt="Shampoos">
-                            <div class="help__item__title">Shampoos</div>
-                        </div>
-<!--                    </div>-->
-<!--                    <div class="help__items help__items-bottom">-->
-                        <div class="help__item">
-                            <img src="./images/svg/vitamins.svg" alt="Vitamins">
-                            <div class="help__item__title">Vitamins</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/medicines.svg" alt="Medicines">
-                            <div class="help__item__title">Medicines</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/collars-or-leashes.svg" alt="Collars / leashes">
-                            <div class="help__item__title">Collars / leashes</div>
-                        </div>
-                        <div class="help__item">
-                            <img src="./images/svg/sleeping-area.svg" alt="Sleeping areas">
-                            <div class="help__item__title">Sleeping areas</div>
-                        </div>
-<!--                    </div>-->
+                    <!--                    <div class="help__items">-->
+                    <div class="help__item">
+                        <img src="./images/svg/food.svg" alt="Food">
+                        <div class="help__item__title">Pet food</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/transportation.svg" alt="Transportation">
+                        <div class="help__item__title">Transportation</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/toys.svg" alt="Toys">
+                        <div class="help__item__title">Toys</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/bowls-and-cups.svg" alt="Bowls and cups">
+                        <div class="help__item__title">Bowls and cups</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/shampoos.svg" alt="Shampoos">
+                        <div class="help__item__title">Shampoos</div>
+                    </div>
+                    <!--                    </div>-->
+                    <!--                    <div class="help__items help__items-bottom">-->
+                    <div class="help__item">
+                        <img src="./images/svg/vitamins.svg" alt="Vitamins">
+                        <div class="help__item__title">Vitamins</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/medicines.svg" alt="Medicines">
+                        <div class="help__item__title">Medicines</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/collars-or-leashes.svg" alt="Collars / leashes">
+                        <div class="help__item__title">Collars / leashes</div>
+                    </div>
+                    <div class="help__item">
+                        <img src="./images/svg/sleeping-area.svg" alt="Sleeping areas">
+                        <div class="help__item__title">Sleeping areas</div>
+                    </div>
+                    <!--                    </div>-->
                 </div>
             </div>
         </div>
@@ -258,6 +309,8 @@
         </div>
     </div>
 </footer>
-<script src="scripts/index.js"></script>
+
+
+<script src="./scripts/index.js"></script>
 </body>
 </html>
