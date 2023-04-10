@@ -1,70 +1,201 @@
-console.log('Проверка верстки +7\n' +
-    '\n' +
-    'верстка страницы валидная: для проверки валидности вёрстки используйте сервис https://validator.w3.org/ . +4\n' +
-    'Валидной вёрстке соответствует надпись "Document checking completed. No errors or warnings to show." \n' +
-    'В таком случае баллы за пункт требований выставляем полностью. Если есть предупреждения - warnings, \n' +
-    'но нет ошибок - errors, выставляем половину баллов за пункт требований\n' +
-    'логотип в хедере состоит из текстовых элементов +1\n' +
-    'страница содержит ровно один элемент <h1> +1\n' +
-    'добавлен favicon +1\n' +
-    'Вёрстка соответствует макету +35\n' +
-    '\n' +
-    'блок <header> +5\n' +
-    'блок Not only +5\n' +
-    'блок About +5\n' +
-    'блок Our Friends +5\n' +
-    'блок Help +5\n' +
-    'блок In addition +5\n' +
-    'блок <footer> +5\n' +
-    'Требования к css +6\n' +
-    '\n' +
-    'для позиционирования элементов блока Help использована сеточная верстка (flexbox или grid) +2\n' +
-    'при уменьшении масштаба страницы браузера или увеличении ширины страницы (>1280px) вёрстка размещается по центру, \n' +
-    'а не сдвигается в сторону и не растягивается по всей ширине +2\n' +
-    'фоновый цвет тянется на всю ширину страницы +2\n' +
-    'Интерактивность элементов +12\n' +
-    '\n' +
-    'элемент About the Shelter в навигации подсвечен и неинтерактивен, остальные элементы навигации интерактивны +2\n' +
-    'каждая карточка с питомцем в блоке Our Friends интерактивна при наведении на любую область этой карточки +2\n' +
-    'плавная прокрутка по якорям +2\n' +
-    'выполняются все ссылочные связи согласно Перечню ссылочных связей для страницы Main +2\n' +
-    'выполнена интерактивность ссылок и кнопок. Интерактивность заключается не только в изменении внешнего вида курсора,\n' +
-    ' например, при помощи свойства cursor: pointer, но и в использовании и других визуальных эффектов, например, изменение n' +
-    'цвета фона или цвета шрифта, согласно стайлгайду в макете. Если в макете стили не указаны, реализуете их по своему \n' +
-    'усмотрению, руководствуясь общим стилем макета +2\n' +
-    'обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике, не влияющее \n' +
-    'на соседние элементы +2\n' +
-    'Страница Pets (40)\n' +
-    'Проверка верстки +7\n' +
-    '\n' +
-    'верстка страницы валидная: для проверки валидности вёрстки используйте сервис https://validator.w3.org/ . +4\n' +
-    'Валидной вёрстке соответствует надпись "Document checking completed. No errors or warnings to show." В таком случае баллы \n' +
-    'за пункт требований выставляем полностью. Если есть предупреждения - warnings, но нет ошибок - errors, выставляем половину \n' +
-    'баллов за пункт требований\n' +
-    'логотип в хедере состоит из текстовых элементов +1\n' +
-    'страница содержит ровно один элемент <h1> +1\n' +
-    'добавлен favicon +1\n' +
-    'Вёрстка соответствует макету +15\n' +
-    '\n' +
-    'блок <header> +5\n' +
-    'блок Our Friends +5\n' +
-    'блок <footer> +5\n' +
-    'Требования к css +4\n' +
-    '\n' +
-    'при уменьшении масштаба страницы браузера или увеличении ширины страницы (>1280px) вёрстка размещается по центру, \n' +
-    'а не сдвигается в сторону и не растягивается по всей ширине +2\n' +
-    'фоновый цвет тянется на всю ширину страницы +2\n' +
-    'Интерактивность элементов +14\n' +
-    '\n' +
-    'элемент Our pets в навигации подсвечен и неинтерактивен, остальные элементы навигации интерактивны +2\n' +
-    'доступные кнопки пагинации (вправо) активны, недоступные (влево) - неактивны (disabled) +2\n' +
-    'каждая карточка с питомцем в блоке Our Friends интерактивна при наведении на любую область этой карточки +2\n' +
-    'плавная прокрутка по якорям +2\n' +
-    'выполняются все ссылочные связи согласно Перечню ссылочных связей для страницы Pets +2\n' +
-    'выполнена интерактивность ссылок и кнопок. Интерактивность заключается не только в изменении внешнего вида курсора, \n' +
-    'например, при помощи свойства cursor: pointer, но и в использовании и других визуальных эффектов, например, изменение \n' +
-    'цвета фона или цвета шрифта, согласно стайлгайду в макете. Если в макете стили не указаны, реализуете их по своему усмотрению, \n' +
-    'руководствуясь общим стилем макета +2\n' +
-    'обязательное требование к интерактивности: плавное изменение внешнего вида элемента при наведении и клике, не влияющее на соседние элементы +2\n' +
-    '' +
-    'Оценка:  99')
+window.onload = function () {
+
+    // const header = document.querySelector('.header');
+    // window.onscroll = () => {
+    //     if (window.scrollY > 50) {
+    //         header.classList.add('header__active');
+    //     } else {
+    //         header.classList.remove('header__active');
+    //     }
+    // };
+
+
+    const pets = []
+    let petsArr = []
+
+    // Promise.all([fetch('../src/pets.json'),]
+    // )
+    //     .then(async ([petsResponse]) => {
+    //         const petsJson = await petsResponse.json();
+    //         return [petsJson];
+    //     })
+    //     .then(res => {
+    //         pets = res[0];
+    //         console.log(pets);
+    //     });
+    async function getDAta() {
+        const url = '../src/pets.json';
+        const res = await fetch(url);
+        const data = await res.json();
+        data.forEach((item) => pets.push(item));
+        let i = 0;
+        petsArr.push(pets)
+        while (i < 6) {
+            let num = [];
+            let newArr = [];
+            for (let j = 0; j < pets.length; j++) {
+                let random = getRandomInt();
+                if (!num.includes(random)) {
+                    newArr.push(pets[random]);
+                    num.push(random);
+                }else {
+                    j--
+                }
+                num = [];
+            }
+            petsArr.push(newArr);
+            i++
+
+        }
+    }
+
+    getDAta()
+
+    /* БУРГЕР */
+    const burger = document.getElementById('burger');
+    const menu = document.getElementsByClassName('menu');
+    const popup = document.querySelector('.popup');
+    const body = document.querySelector('body')
+    const scrollY = document.body.style.top;
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, parseInt(scrollY || '0') * -1);
+
+
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('burger-open');
+        menu[0].classList.toggle('open');
+        popup.classList.toggle('popup-active');
+        if (body.style.position !== 'fixed') {
+            body.setAttribute('style', "position: fixed");
+        } else {
+            body.setAttribute('style', "position: unset");
+        }
+    });
+
+    document.querySelectorAll('#menu *').forEach((item) => {
+        item.onclick = () => {
+            menu[0].classList.toggle('open')
+            burger.classList.toggle('burger-open');
+            popup.classList.toggle('popup-active')
+            body.style.position = 'unset';
+        }
+    })
+
+
+    popup.addEventListener('click', () => {
+        menu[0].classList.remove('open')
+        burger.classList.remove('burger-open');
+        popup.classList.toggle('popup-active')
+        body.style.position = 'unset';
+    })
+
+
+    /* КАРУСЕЛЬ */
+
+    const BTN_LEFT = document.querySelector('#slider__prev');
+    const BTN_RIGHT = document.querySelector('#slider__next');
+    const PETS_CARUSEL = document.querySelector('#pets-carusel');
+    const CARD = document.getElementsByClassName('pets__item');
+    const CARD_BUTTON = document.getElementsByClassName('pets__item-button');
+    const ACTIVE_ELEM = document.querySelectorAll('#items-active .pets__item');
+    // const ACTIVE_ITEM = document.querySelectorAll('#items-active');
+    const LEFT_ELEM = document.querySelectorAll('#items-left .pets__item');
+    const RIGHT_ELEM = document.querySelectorAll('#items-right .pets__item');
+    let flag = true;
+    let side = '';
+    let sourceStamp = [];
+
+
+    const moveLeft = () => {
+        PETS_CARUSEL.classList.add('move-left');
+        BTN_LEFT.removeEventListener('click', moveLeft);
+        BTN_RIGHT.removeEventListener('click', moveRight);
+        for (let i = 0; i < CARD.length; i++) {
+            CARD[i].classList.remove('img-eff')
+            CARD_BUTTON[i].classList.remove('button-eff')
+        }
+        side = 'left';
+    };
+
+    const moveRight = () => {
+        PETS_CARUSEL.classList.add('move-right');
+        BTN_LEFT.removeEventListener('click', moveLeft);
+        BTN_RIGHT.removeEventListener('click', moveRight);
+        for (let i = 0; i < CARD.length; i++) {
+            CARD[i].classList.remove('img-eff')
+            CARD_BUTTON[i].classList.remove('button-eff')
+        }
+        side = 'right';
+    };
+
+    function getRandomInt() {
+        return Math.floor(Math.random() * 8);
+    }
+
+    BTN_LEFT.addEventListener('click', moveLeft);
+    BTN_RIGHT.addEventListener('click', moveRight);
+
+    PETS_CARUSEL.addEventListener('transitionend', (transitionEvent) => {
+        if (transitionEvent.propertyName === 'transform' && side === 'left') {
+            PETS_CARUSEL.classList.remove('move-left');
+            document.querySelector('#items-active').innerHTML = document.querySelector('#items-left').innerHTML;
+            createElements();
+        }
+        BTN_LEFT.addEventListener('click', moveLeft);
+        if (transitionEvent.propertyName === 'transform' && side === 'right') {
+            PETS_CARUSEL.classList.remove('move-right');
+            document.querySelector('#items-active').innerHTML = document.querySelector('#items-right').innerHTML;
+            createElements();
+        }
+
+        BTN_RIGHT.addEventListener('click', moveRight);
+        for (let i = 0; i < CARD.length; i++) {
+            CARD[i].classList.add('img-eff')
+            CARD_BUTTON[i].classList.add('button-eff')
+        }
+    })
+
+    function createElements() {
+        let numero
+        if (side === 'left') {
+            for (let i = 0; i < ACTIVE_ELEM.length; i++) {
+                numero = [];
+                for (let j = 0; j < LEFT_ELEM.length; j++) {
+                    let random = getRandomInt();
+
+                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
+                    && !numero.includes(random)) {
+                        LEFT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
+                        LEFT_ELEM.item(j).children[1].textContent = pets[random].name;
+                        numero.push(random);
+                    } else {
+                        j--
+                    }
+                }
+            }
+        }
+        if (side === 'right') {
+            for (let i = 0; i < ACTIVE_ELEM.length; i++) {
+                numero = [];
+                for (let j = 0; j < RIGHT_ELEM.length; j++) {
+                    let random = getRandomInt();
+                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
+                        && !numero.includes(random)) {
+                        RIGHT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
+                        RIGHT_ELEM.item(j).children[1].textContent = pets[random].name;
+                        numero.push(random);
+                    } else {
+                        j--
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
