@@ -10,7 +10,7 @@ window.onload = function () {
     //     }
     // };
 
-    // Promise.all([fetch('../src/pets.json'),]
+    // Promise.all([fetch('../source/pets.json'),]
     // )
     //     .then(async ([petsResponse]) => {
     //         const petsJson = await petsResponse.json();
@@ -23,7 +23,7 @@ window.onload = function () {
     const pets = []
 
     async function getDAta() {
-        const url = '../src/pets.json';
+        const url = '../source/pets.json';
         const res = await fetch(url);
         const data = await res.json();
         data.forEach((item) => pets.push(item));

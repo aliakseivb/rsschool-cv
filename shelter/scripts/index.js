@@ -13,7 +13,7 @@ window.onload = function () {
     const pets = []
     let petsArr = []
 
-    // Promise.all([fetch('../src/pets.json'),]
+    // Promise.all([fetch('../source/pets.json'),]
     // )
     //     .then(async ([petsResponse]) => {
     //         const petsJson = await petsResponse.json();
@@ -24,7 +24,7 @@ window.onload = function () {
     //         console.log(pets);
     //     });
     async function getDAta() {
-        const url = '../src/pets.json';
+        const url = '../source/pets.json';
         const res = await fetch(url);
         const data = await res.json();
         data.forEach((item) => pets.push(item));
