@@ -24,7 +24,7 @@ window.onload = function () {
     //         console.log(pets);
     //     });
     async function getDAta() {
-        const url = '../source/pets.json';
+        const url = 'https://github.com/AlexBoronin/rsschool-cv/tree/shelter/shelter/source/pets.json';
         const res = await fetch(url);
         const data = await res.json();
         data.forEach((item) => pets.push(item));
