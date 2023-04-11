@@ -1,0 +1,92 @@
+body {
+    background: #f5f5eb;
+}
+
+.container {
+    margin: 5vmax;
+    display: grid;
+    height: 30vh;
+    grid-template-columns: 1fr;
+}
+
+.title {
+    font-size: 1em;
+}
+
+.page__title {
+    font-size: .8em;
+}
+
+.title,
+.page{
+    display: flex;
+    width: 100%;
+    border-bottom: .1rem solid #a6a9ab;
+    transition: all 1s ease;
+    align-items: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    color: black;
+    justify-content: space-between;
+}
+
+.cross {
+    width: 1vmax;
+    height: 1vmax;
+    rotate: 45deg;
+    display: none;
+    transition: all .3s ease;
+}
+
+.place__img{
+    display: none;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    padding: 1rem;
+    transform-box: fill-box;
+    animation: size;
+}
+
+.place__img img {
+    width: auto;
+    height: 90%;
+    transition: .5s ease-out;
+}
+
+.page:has(:is(.check__radio:checked)) h2{
+    color: cornflowerblue;
+}
+
+.page:has(:is(.check__radio:checked)) .cross {
+    rotate: 90deg;
+}
+
+.page:has(:is(.check__radio:checked)) .cross path {
+    fill: cornflowerblue;
+}
+
+#one:checked ~ .place__img {
+    display: block;
+    height: 30vh;
+}
+
+#two:checked ~ .place__img {
+    display: block;
+    height: 30vh;
+}
+
+#three:checked ~ .place__img {
+    display: block;
+    height: 30vh;
+}
+
+#four:checked ~ .place__img {
+    display: block;
+    height: 30vh;
+}
+
+#five:checked ~ .place__img {
+    display: block;
+    height: 30vh;
+}
