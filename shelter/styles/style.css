@@ -634,7 +634,7 @@ h1 {
 }
 
 .pets_popup_opasity {
-    display: flex;
+    display: none;
     position: absolute;
     justify-content: center;
     align-items: center;
@@ -647,7 +647,7 @@ h1 {
 }
 
 .pets_popup_place {
-    display: flex;
+    display: none;
     align-items: center;
     background: #FAFAFA;
     border-radius: 9px;
