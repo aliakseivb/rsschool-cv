@@ -102,9 +102,7 @@ window.onload = function () {
     // const ACTIVE_ITEM = document.querySelectorAll('#items-active');
     const LEFT_ELEM = document.querySelectorAll('#items-left .pets__item');
     const RIGHT_ELEM = document.querySelectorAll('#items-right .pets__item');
-    let flag = true;
     let side = '';
-    let sourceStamp = [];
 
 
     const moveLeft = () => {
@@ -189,6 +187,37 @@ window.onload = function () {
             }
         }
     }
+
+    const ELEM = document.querySelectorAll('.pets__item');
+    const ELEM_POPUP_OPACITY = document.querySelector('.pets_popup_opacity');
+    const PETS_POPUP = document.querySelector('.popup_wrap');
+    const PETS_DESC = document.querySelector('.pets_popup_desc');
+    const POPUP_CLOSE = document.querySelector('.cross-close');
+    let POPUP_IMG = document.querySelector('#popup_img');
+
+
+    ELEM.forEach((el) => el.addEventListener('click', (ev) => {
+        let elemText = ev.currentTarget.children[1].textContent.trim();
+        for (let i = 0; i < pets.length; i++) {
+            if (pets[i].name === elemText) {
+                POPUP_IMG.setAttribute('src', `${pets[i].src}`)
+                PETS_DESC.children[0].textContent = pets[i].name;
+                PETS_DESC.children[1].textContent = pets[i].type + ' - ' + pets[i].breed;
+                PETS_DESC.children[2].textContent = pets[i].description;
+                PETS_DESC.children[3].innerHTML = `Age:&nbsp<span>${pets[i].age}</span>`;
+                PETS_DESC.children[4].innerHTML = `Inoculations:&nbsp<span> ${pets[i].inoculations}</span>`;
+                PETS_DESC.children[5].innerHTML = `Diseases:&nbsp<span>${pets[i].diseases}</span>`;
+                PETS_DESC.children[6].innerHTML = `Parasites:&nbsp<span>${pets[i].parasites}</span>`;
+                ELEM_POPUP_OPACITY.classList.add('visible');
+                PETS_POPUP.classList.add('open');
+            }
+        }
+
+    }))
+    POPUP_CLOSE.addEventListener('click', () => {
+            ELEM_POPUP_OPACITY.classList.remove('visible');
+            PETS_POPUP.classList.remove('open');
+    })
 }
 
 

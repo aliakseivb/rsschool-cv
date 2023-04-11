@@ -51,6 +51,17 @@
     .footer__img img {
         width: 100%;
     }
+
+    .pets_popup_place {
+        max-width: 630px;
+    }
+    .pets_popup_image {
+        max-width: 350px;
+    }
+
+    .pets_popup_desc {
+        padding: 10px 9px 37px 11px;
+    }
 }
 
 @media screen and (max-width: 1135px) {
@@ -397,6 +408,22 @@
     .about__text__bottom {
         max-width: 100%;
         font-size: 15px;
+        text-align: justify;
+    }
+    .pets_popup_image {
+        display: none;
+    }
+    .pets_popup_desc_title {
+        text-align: center;
+    }
+
+    .pets_popup_desc_subtitle {
+        text-align: center;
+    }
+
+    .pets_popup_desc_desc {
+        font-size: 13px;
+        line-height: 14px;
         text-align: justify;
     }
 }
