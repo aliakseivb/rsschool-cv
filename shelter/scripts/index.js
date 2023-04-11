@@ -13,7 +13,7 @@ window.onload = function () {
     const pets = []
     let petsArr = []
 
-    // Promise.all([fetch('../src/pets.json'),]
+    // Promise.all([fetch('../source/pets.json'),]
     // )
     //     .then(async ([petsResponse]) => {
     //         const petsJson = await petsResponse.json();
@@ -24,7 +24,7 @@ window.onload = function () {
     //         console.log(pets);
     //     });
     async function getDAta() {
-        const url = '../src/pets.json';
+        const url = '../source/pets.json';
         const res = await fetch(url);
         const data = await res.json();
         data.forEach((item) => pets.push(item));
@@ -163,9 +163,7 @@ window.onload = function () {
                 numero = [];
                 for (let j = 0; j < LEFT_ELEM.length; j++) {
                     let random = getRandomInt();
-
-                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
-                    && !numero.includes(random)) {
+                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src')) && !numero.includes(random)) {
                         LEFT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
                         LEFT_ELEM.item(j).children[1].textContent = pets[random].name;
                         numero.push(random);
@@ -180,8 +178,7 @@ window.onload = function () {
                 numero = [];
                 for (let j = 0; j < RIGHT_ELEM.length; j++) {
                     let random = getRandomInt();
-                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src'))
-                        && !numero.includes(random)) {
+                    if (!pets[random].src.includes(ACTIVE_ELEM.item(i).children[0].getAttribute('src')) && !numero.includes(random)) {
                         RIGHT_ELEM.item(j).children[0].setAttribute('src', `${pets[random].src.slice(1)}`);
                         RIGHT_ELEM.item(j).children[1].textContent = pets[random].name;
                         numero.push(random);
