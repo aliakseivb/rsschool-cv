@@ -525,3 +525,7 @@ h1 span{
     background: #F1CDB3;
     rotate: 90deg;
 }
+
+.noscroll {
+    overflow: hidden;
+}

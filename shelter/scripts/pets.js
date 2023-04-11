@@ -22,7 +22,7 @@ window.onload = function () {
     //     });
     const pets = [];
 
-    async function getDAta() {
+    async function getData() {
         const url = 'https://raw.githubusercontent.com/AlexBoronin/rsschool-cv/shelter/shelter/source/pets.json';
         // const url = "../source/pets.json";
         const res = await fetch(url);
@@ -31,7 +31,7 @@ window.onload = function () {
         makePetsArr(pets);
     }
 
-    getDAta();
+    getData();
 
     /* БУРГЕР */
     const burger = document.getElementById('burger');
@@ -360,7 +360,8 @@ window.onload = function () {
     const PETS_POPUP = document.querySelector('.popup_wrap');
     const PETS_DESC = document.querySelector('.pets_popup_desc');
     const POPUP_CLOSE = document.querySelector('.cross-close');
-    let POPUP_IMG = document.querySelector('#popup_img');
+    const POPUP_IMG = document.querySelector('#popup_img');
+    const HTML = document.querySelector('html')
 
     ELEM.forEach((el) => el.addEventListener('click', (ev) => {
         let elemName = ev.currentTarget.children[1].textContent.trim();
@@ -376,14 +377,23 @@ window.onload = function () {
                 PETS_DESC.children[6].innerHTML = `Parasites: <span>${pets[i].parasites}</span>`;
                 ELEM_POPUP_OPACITY.classList.add('visible');
                 PETS_POPUP.classList.add('open');
+                HTML.classList.add('noscroll');
             }
         }
 
     }))
-    POPUP_CLOSE.addEventListener('click', () => {
-        ELEM_POPUP_OPACITY.classList.remove('visible');
-        PETS_POPUP.classList.remove('open');
+    window.addEventListener('click', (el)=>{
+        if(el.target === PETS_POPUP || el.target === POPUP_CLOSE || el.target === POPUP_CLOSE.children[0]){
+            ELEM_POPUP_OPACITY.classList.remove('visible');
+            PETS_POPUP.classList.remove('open');
+            HTML.classList.remove('noscroll');
+        }
     })
+    // POPUP_CLOSE.addEventListener('click', () => {
+    //     ELEM_POPUP_OPACITY.classList.remove('visible');
+    //     PETS_POPUP.classList.remove('open');
+    //     HTML.classList.remove('noscroll');
+    // })
 }
 
 
