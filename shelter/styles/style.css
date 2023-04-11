@@ -14,7 +14,7 @@ html {
 }
 
 body {
-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 .container {
@@ -220,6 +220,7 @@ h1 {
 
 .pets__container {
     padding: 80px 40px 100px;
+    position: relative;
 }
 
 .pets__title {
@@ -631,3 +632,76 @@ h1 {
     opacity: 80%;
     z-index: 1;
 }
+
+.pets_popup_opasity {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #292929;
+    opacity: 60%;
+}
+
+.pets_popup_place {
+    display: flex;
+    align-items: center;
+    background: #FAFAFA;
+    border-radius: 9px;
+    opacity: 100%;
+}
+
+.pets_popup_image {
+    max-width: 500px;
+}
+
+.pets_popup_image img {
+    width: 100%;
+}
+
+.pets_popup_desc {
+    padding: 50px 20px 88px 29px;
+}
+
+.pets_popup_desc_title {
+    font-family: Georgia, sans-serif;
+    font-size: 35px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.pets_popup_desc_subtitle {
+    font-family: Georgia, sans-serif;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-bottom: 40px;
+}
+
+.pets_popup_desc_desc {
+    font-family: Georgia, sans-serif;
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-bottom: 40px;
+    max-width: 350px;
+}
+
+.pets_popup_desc p {
+    font-family: Georgia, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.06em;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.pets_popup_desc p span {
+    font-weight: 400;
+}
+
