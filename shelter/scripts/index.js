@@ -13,7 +13,7 @@ window.onload = function () {
     const pets = []
     let petsArr = []
 
-    // Promise.all([fetch('../source/pets.json'),]
+    // Promise.all([fetch('../assets/pets.json'),]
     // )
     //     .then(async ([petsResponse]) => {
     //         const petsJson = await petsResponse.json();
@@ -23,8 +23,9 @@ window.onload = function () {
     //         pets = res[0];
     //         console.log(pets);
     //     });
+
     async function getDAta() {
-        const url = 'https://github.com/AlexBoronin/rsschool-cv/tree/shelter/shelter/source/pets.json';
+        const url = 'https://raw.githubusercontent.com/AlexBoronin/rsschool-cv/shelter/shelter/source/pets.json';
         const res = await fetch(url);
         const data = await res.json();
         data.forEach((item) => pets.push(item));
@@ -45,7 +46,6 @@ window.onload = function () {
             }
             petsArr.push(newArr);
             i++
-
         }
     }
 
@@ -197,6 +197,7 @@ window.onload = function () {
 
 
     ELEM.forEach((el) => el.addEventListener('click', (ev) => {
+        getDAta()
         let elemText = ev.currentTarget.children[1].textContent.trim();
         for (let i = 0; i < pets.length; i++) {
             if (pets[i].name === elemText) {

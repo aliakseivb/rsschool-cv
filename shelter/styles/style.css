@@ -653,6 +653,7 @@ h1 {
     height: 100%;
     top: 0;
     left: 0;
+    cursor: pointer;
 }
 
 .open{
@@ -662,7 +663,6 @@ h1 {
 .visible {
     display: block;
 }
-
 
 .pets_popup_place {
     display: flex;
