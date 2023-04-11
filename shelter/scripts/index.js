@@ -24,7 +24,7 @@ window.onload = function () {
     //         console.log(pets);
     //     });
 
-    async function getDAta() {
+    async function getData() {
         const url = 'https://raw.githubusercontent.com/AlexBoronin/rsschool-cv/shelter/shelter/source/pets.json';
         const res = await fetch(url);
         const data = await res.json();
@@ -39,7 +39,7 @@ window.onload = function () {
                 if (!num.includes(random)) {
                     newArr.push(pets[random]);
                     num.push(random);
-                }else {
+                } else {
                     j--
                 }
                 num = [];
@@ -49,7 +49,7 @@ window.onload = function () {
         }
     }
 
-    getDAta()
+    getData()
 
     /* БУРГЕР */
     const burger = document.getElementById('burger');
@@ -193,11 +193,18 @@ window.onload = function () {
     const PETS_POPUP = document.querySelector('.popup_wrap');
     const PETS_DESC = document.querySelector('.pets_popup_desc');
     const POPUP_CLOSE = document.querySelector('.cross-close');
-    let POPUP_IMG = document.querySelector('#popup_img');
+    const POPUP_IMG = document.querySelector('#popup_img');
+    const HTML = document.querySelector('html')
 
-
+    window.addEventListener('click', (el)=>{
+        if(el.target === PETS_POPUP || el.target === POPUP_CLOSE || el.target === POPUP_CLOSE.children[0]){
+            ELEM_POPUP_OPACITY.classList.remove('visible');
+            PETS_POPUP.classList.remove('open');
+            HTML.classList.remove('noscroll')
+        }
+    })
     ELEM.forEach((el) => el.addEventListener('click', (ev) => {
-        getDAta()
+        getData()
         let elemText = ev.currentTarget.children[1].textContent.trim();
         for (let i = 0; i < pets.length; i++) {
             if (pets[i].name === elemText) {
@@ -211,14 +218,16 @@ window.onload = function () {
                 PETS_DESC.children[6].innerHTML = `Parasites:&nbsp<span>${pets[i].parasites}</span>`;
                 ELEM_POPUP_OPACITY.classList.add('visible');
                 PETS_POPUP.classList.add('open');
+                HTML.classList.add('noscroll');
             }
         }
 
     }))
-    POPUP_CLOSE.addEventListener('click', () => {
-            ELEM_POPUP_OPACITY.classList.remove('visible');
-            PETS_POPUP.classList.remove('open');
-    })
+    // POPUP_CLOSE.addEventListener('click', () => {
+    //     ELEM_POPUP_OPACITY.classList.remove('visible');
+    //     PETS_POPUP.classList.remove('open');
+    //     HTML.classList.remove('noscroll')
+    // })
 }
 
 
