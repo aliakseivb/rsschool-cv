@@ -204,7 +204,6 @@ window.onload = function () {
         }
     })
     ELEM.forEach((el) => el.addEventListener('click', (ev) => {
-        getData()
         let elemText = ev.currentTarget.children[1].textContent.trim();
         for (let i = 0; i < pets.length; i++) {
             if (pets[i].name === elemText) {
